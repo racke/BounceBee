@@ -1,0 +1,10 @@
+^blib\/
+^pm_to_blib$
+^\.git\/
+^.*\.tar.gz$
+^.*.bak
+^.*.old
+^.*.swp
+.gitignore
+.travis.yml
+
