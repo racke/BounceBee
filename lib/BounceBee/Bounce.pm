@@ -68,6 +68,7 @@ has providers => (
         return {
             'bluewin.ch' => 'BlueWin',
             'gmail.com' => 'Google Email',
+            'gov.au' => 'Australian Government',
             't-online.de' => 'T Online',
             'web.de' => 'WEB.DE',
         }
