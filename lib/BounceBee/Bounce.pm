@@ -96,8 +96,17 @@ sub provider {
     my $destination = $self->data->destination;
     my $host = $self->rhost;
 
-    if (exists $self->providers->{$destination}) {
-        return $self->providers->{$destination};
+    # break down destination
+    my @dest_bits = split /\./, $destination;
+
+    while (@dest_bits >= 2) {
+        my $check_destination = join('.', @dest_bits);
+
+        if (exists $self->providers->{$check_destination}) {
+            return $self->providers->{$check_destination};
+        }
+
+        shift @dest_bits;
     }
 
     return $destination ? $destination : $host;
