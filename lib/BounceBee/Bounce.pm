@@ -111,7 +111,10 @@ sub reason_advice {
     my $reason = $self->reason;
     my $advice = [$reason];
 
-    if ($reason eq 'hostunknown') {
+    if ($reason eq 'blocked') {
+        $advice = ['Your email provider %s has blocked our email to your email address %s.',
+                   $self->provider, $self->recipient_email];
+    } elsif ($reason eq 'hostunknown') {
         $advice = ['Please doublecheck your email %s, the domain %s is unknown.',
                    $self->recipient_email, $self->recipient_domain];
     }
