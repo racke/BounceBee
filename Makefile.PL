@@ -26,8 +26,8 @@ WriteMakefile(
         # File tools
         'Path::Tiny' => 0,
 
-        # Sisimai
-        'Sisimai' => 0,
+        # Sisimai (for "delivered" reason)
+        'Sisimai' => '4.16.0',
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'BounceBee-*' },
