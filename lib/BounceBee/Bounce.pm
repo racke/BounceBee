@@ -134,6 +134,9 @@ sub reason_advice {
     elsif ($reason eq 'securityerror') {
         $advice = ['Your provider %s rejected the email to your address %s.', $self->provider, $self->recipient_email];
     }
+    elsif ($reason eq 'spamdetected') {
+        $advice = ['Your provider %s rejected the email to your address %s as SPAM.', $self->provider, $self->recipient_email];
+    }
     elsif ($reason eq 'userunknown') {
         $advice = ['Please doublecheck your email address %s, your email provider %s has rejected our email with the reason of unknown', $self->recipient_email, $self->provider];
     }
