@@ -91,6 +91,18 @@ sub rhost {
     return $_[0]->data->rhost;
 }
 
+sub deliverystatus {
+    return $_[0]->data->deliverystatus;
+}
+
+sub replycode {
+    return $_[0]->data->replycode;
+}
+
+sub diagnosticcode {
+    return $_[0]->data->diagnosticcode;
+}
+
 sub provider {
     my $self = shift;
     my $destination = $self->data->destination;
