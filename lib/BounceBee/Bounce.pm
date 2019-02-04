@@ -66,10 +66,14 @@ has providers => (
     is => 'ro',
     default => sub {
         return {
+            'arcor.de' => 'Arcor',
             'bluewin.ch' => 'BlueWin',
             'gmail.com' => 'Google Email',
             'gov.au' => 'Australian Government',
+            'live.com' => 'Windows Live',
+            'live.de' => 'Windows Live',
             't-online.de' => 'T Online',
+            'vtxmail.ch' => 'VTX',
             'web.de' => 'WEB.DE',
         }
     }
