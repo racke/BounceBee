@@ -39,6 +39,9 @@ for my $f (@files) {
         print "Recipient: ", $bounce->recipient->address, "\n";
         print "Host: ", $bounce->recipient->host, "\n";
         print "Bounce date: ", $bounce->timestamp->ymd, "\n";
+        print "Reply code: ", $bounce->replycode, "\n";
+        print "Delivery status: ", $bounce->deliverystatus, "\n";
+        print "Diagnostics: ", $bounce->diagnosticcode, "\n";
         print "\n";
     }
 }
