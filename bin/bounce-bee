@@ -31,6 +31,7 @@ for my $f (@files) {
         if ($verbose) {
             print Dumper($bounce);
         }
+        print "File: ", $f, "\n";
         print "MX: ", $bounce->rhost, "\n";
         print "Domain: ", $bounce->recipient_domain, "\n";
         print "Reason: ", $bounce->reason, "\n";
